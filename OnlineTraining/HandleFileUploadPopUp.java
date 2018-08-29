@@ -3,20 +3,17 @@ package OnlineTraining;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
-public class HandleDropBox {
+public class HandleFileUploadPopUp {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "/Users/elmurotyangiboev/Documents/Selenium dependencies/drivers/chromedriver");
 		WebDriver driver = new ChromeDriver(); // launch Chrome
+		
+		driver.get("http://html.com/input-type-file/");
+		
+		driver.findElement(By.xpath("//*[@id='fileupload']")).sendKeys("/Users/elmurotyangiboev/Desktop/Locators_table_1_0_2.pdf");
 
-		driver.get("https://scgi.half.ebay.com/ws/eBayISAPI.dll?RegisterEnterInfo&usage=2943&ru="); //enter url
-		
-		//handle drop box:
-		Select select = new Select(driver.findElement(By.id("state")));
-		select.selectByVisibleText("Pennsylvania");
-		
 	}
 
 }
