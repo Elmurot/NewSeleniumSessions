@@ -10,8 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HandleWindowPopUp {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/elmurotyangiboev/Documents/Selenium dependencies/drivers/chromedriver");
+		
+		// 1. alerts -- JavaScript Pop Up --> Alert API (accept, dismiss)
+		// 2. File Upload Pop Up --> Browse Button (type = file, sendKeys(path))
+		// 3. Browser Window Popup --> Advertisement Pop Up (windowHandler API - getWindowHandles())
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/elmurotyangiboev/Documents/Selenium dependencies/drivers/chromedriver");
 		WebDriver driver = new ChromeDriver(); // launch Chrome
 
 		driver.get("http://www.popuptest.com/goodpopups.html");
